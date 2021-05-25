@@ -15,7 +15,6 @@ enviar = ''
 
 while(enviar != 'sair'):
     recebe = con.recv(1024)
-    con.send('Teste'.encode())
     print('Mensagem recebida:' + recebe.decode())
     enviar = input('Digite uma mensagem para enviar ao cliente:')
     con.send(enviar.encode())
